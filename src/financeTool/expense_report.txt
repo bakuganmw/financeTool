@@ -1,0 +1,11 @@
+Expense Report:
+
+Friends:
+- J
+- a
+
+Expenses:
+- K: $100.00 (for J)
+- b: $50.00 (for a)
+
+Total Expenses: Total: $150.00
