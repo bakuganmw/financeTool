@@ -1,11 +1,10 @@
 Expense Report:
 
 Friends:
-- J
-- a
+- Jan
+- Andrzej
 
 Expenses:
-- K: $100.00 (for J)
-- b: $50.00 (for a)
+- Burger: $100.00 (for Jan)
 
-Total Expenses: Total: $150.00
+Total Expenses: Total: $100.00

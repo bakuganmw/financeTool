@@ -9,7 +9,7 @@ author = "Jan Michalak & Andrzej Rosa"
 author_email = "janw-1990@wp.pl"
 
 [tool.briefcase.app.financeTool]
-formal_name = "Hello World"
+formal_name = "Finance Tool"
 description = "Application for manging finances and helping woth daily days problems"
 long_description = """More details about the app should go here.
 """

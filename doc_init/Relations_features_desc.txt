@@ -1,0 +1,41 @@
+### Relationships between functionalities
+
+#### 1. User management (`Users`)
+- **Add/Edit/Delete Users**: Users are the backbone of the application. Every expense, savings goal, income and expense breakdown is assigned to the user.
+
+#### 2. Expense management
+- **Adding/editing/deleting expenses**: Each expense has descriptions, amounts, dates and assigned payers. Expenses can be categorized and divided into parts.
+- **Assigning categories to expenses**: Expenses can be assigned to categories to make them easier to analyze and manage.
+
+#### 3. ExpenseShares
+- **Distribution of expenses between users**: Expenses can be divided among several users, which is stored in the `ExpenseShares` table.
+
+#### 4. Income Management
+- **Add/Edit/Delete Income**: User income is recorded to track income sources and analyze the user's financial situation.
+
+#### 5. Categorization of expenses (`Categories`)
+- **Category Management**: Categories are used to classify your expenses, making it easier to track and analyze your expenses across categories.
+- **Assigning categories to expenses**: The `ExpenseCategories` table allows you to assign multiple categories to one expense.
+
+#### 6. Managing SavingsGoals (`SavingsGoals`)
+- **Add/Edit/Delete Savings Goals**: Users can set savings goals, track progress, and analyze how much more they need to save to reach their goals.
+
+### Relationship description
+
+1. **Users -> Expenses**: Each expense is assigned to the user who paid for it (`paid_by`).
+2. **Users -> Income**: Income is assigned to users to track their income sources.
+3. **Users -> ExpenseShares**: Users are assigned portions of expenses in the `ExpenseShares` table.
+4. **Users -> SavingsGoals**: Each savings goal is assigned to a user.
+5. **Expenses -> ExpenseShares**: Expenses are divided among users, which is stored in the `ExpenseShares` table.
+6. **Expenses -> ExpenseCategories**: Expenses can have categories assigned, which is stored in the `ExpenseCategories` table.
+7. **ExpenseCategories -> Categories**: Categories are assigned to expenses, which allows for better organization and analysis of expenses.
+8. **SavingsGoals -> Categories**: Savings goals can be assigned to categories, allowing you to better plan and track your savings.
+
+### Application functionalities
+
+1. **Adding Users**: User can add a new user to the system.
+2. **Adding expenses**: The user can add a new expense, assign it to a category and divide it among other users.
+3. **Income Tracking**: Users can add income, track its sources and analyze their financial situation.
+4. **Setting Savings Goals**: You can set savings goals, track your progress and analyze how much you still need to save.
+5. **Expense Categorization**: User can assign expenses to categories to better understand their expenses and find areas where they can save.
+6. **Reporting and Analysis**: Users can generate reports that help them understand their expenses, income and progress towards achieving their savings goals.

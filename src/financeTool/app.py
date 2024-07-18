@@ -228,16 +228,25 @@ class ExpenseManager(toga.App):
     def split_expenses_handler(self, widget):
         # Dzielenie kosztów
         friend_expenses = {friend: 0 for friend in self.friend_selection.items}
+        print("Initial friend_expenses:", friend_expenses)
+
         for row in self.expense_table.data:
             friend_name = row.friend
             amount = float(row.amount[1:])
+            print(f"Processing row: friend={friend_name}, amount={amount}")
             if friend_name not in friend_expenses:
                 friend_expenses[friend_name] = 0
             friend_expenses[friend_name] += amount
+            print("Updated friend_expenses:", friend_expenses)
 
-        split_message = "Expenses split as follows:\n\n"
-        for friend, amount in friend_expenses.items():
+        # Przesunięcie pętli do przodu o tyle ile jest wpisanych osób
+        start_index = len(self.friend_selection.items)
+
+        split_message = "Expense Split Report:\n\n"
+        split_message += "Friends:\n"
+        for index, (friend, amount) in enumerate(friend_expenses.items(), start=start_index):
             split_message += f"{friend}: ${amount:.2f}\n"
+            print(f"Friend: {friend}, Amount: ${amount:.2f}")
 
         self.show_message('Split Expenses', split_message)
 

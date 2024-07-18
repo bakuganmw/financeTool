@@ -1,0 +1,79 @@
+Version 1:
+
+### Layout Details:
+1. **Home Screen (Your Bills)**
+ - **Header:** "Your Bills" in blue (#007BFF).
+ - **To Pay Section:** At the top of the screen there is a tab with the title "To Pay" and the amount to be paid. The card has blue accents.
+ - **Add New Bill button:** Green "Add New Bill" button at the bottom of the screen.
+ - **Account Details:** List of accounts with name, amount and payment status. Icons in green for paid bills.
+
+2. **Bill Details Screen**
+ - **Header:** "Your Bills" in blue.
+ - **Payments Section:** Payment details including amount, due date and status.
+ - **Edit and Delete Button:** Green "Edit" and "Delete" buttons.
+
+3. **Add New Bill Screen**
+ - **Header:** "Your New Bill" in blue.
+ - **Add Bill Form:** Form fields on a white background with dark gray text, including name, amount, due date and reminders.
+ - **Save button:** Green "Add New Bill" button.
+
+### Colors:
+- **Main Color:** Blue (#007BFF)
+- **Secondary Color:** Light Gray (#F8F9FA)
+- **Accent Color:** Green (#28A745)
+- **Background Color:** White (#FFFFFF)
+- **Text color:** Dark gray (#343A40)
+
+### Icons and Graphic Elements:
+- **Status Icons:** Green icons for paid bills.
+- **Buttons:** Blue and green buttons for navigation and actions.
+
+
+Version 2
+
+### Color Palette:
+- **Primary Colors**:
+ - Soft Blue (#8AC7DB)
+ - Light Green (#A8E6CF)
+- **Secondary Colors**:
+ - Dark Blue (#075E8A)
+ - Deep Green (#3B8378)
+- **Accent Colors**:
+ - Pale Yellow (#FFFACD)
+ - Coral (#FF6F61)
+- **Background Colors**:
+ - White (#FFFFFF)
+ - Light Gray (#F6F6F6)
+
+### Layout:
+- **Home Screen**:
+ - **Header**: Displays the app name/logo at the top with a balance summary.
+ - **Main Section**:
+ - **Upcoming Bills**: Lists bills that are due soon.
+ - **Due Bills**: Highlights bills that are due today or overdue.
+ - **Paid Bills**: Shows a summary of recently paid bills.
+ - **Navigation Bar**: Located at the bottom with icons for Home, Bills, Payments, and Settings.
+
+### Typography:
+- **Primary Font**: Sans-serif (e.g., Open Sans, Roboto)
+- **Font Sizes**:
+ - Header: 24px, bold
+ - Section Titles: 18px, medium
+ - Bill Items: 16px, regular
+ - Navigation Icons: 14px, regular
+
+### Icons:
+- **Home**: A house icon
+- **Bills**: A document with a dollar sign
+- **Payments**: A credit card or money icon
+- **Settings**: A gear icon
+
+### Design Elements:
+- **Buttons**: Rounded corners with gradient backgrounds (e.g., blue to green).
+- **Cards**: Soft shadows and rounded edges to separate different bill sections.
+- **Input Fields**: Minimalist design with underlined text fields.
+
+### User Interaction:
+- **Gestures**: Swipe left/right to delete or mark bills as paid.
+- **Notifications**: Subtle, non-intrusive notifications for large bills.
+- **Animations**: Smooth transitions and slight animations for a dynamic feel.
