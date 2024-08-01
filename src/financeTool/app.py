@@ -3,10 +3,41 @@ from toga.style import Pack
 from toga.style.pack import COLUMN, ROW, CENTER, LEFT
 from toga.colors import RED, BLUE, GREEN, LIGHTBLUE, LIGHTGREEN, ORANGE, WHITE
 
-
 class ExpenseManager(toga.App):
     def startup(self):
-        # Główne okno aplikacji
+        # Initialize the main window
+        self.main_window = toga.MainWindow(title="Login")
+        self.setup_login_window()
+
+    def setup_login_window(self):
+        # Create login box
+        login_box = toga.Box(style=Pack(direction=COLUMN, alignment=CENTER, padding=20, background_color=LIGHTBLUE))
+        username_input = toga.TextInput(placeholder="Username", style=Pack(flex=1, padding=(0, 5), width=200, background_color=WHITE))
+        password_input = toga.PasswordInput(placeholder="Password", style=Pack(flex=1, padding=(0, 5), width=200, background_color=WHITE))
+        login_button = toga.Button('Login', on_press=lambda btn: self.login_handler(username_input, password_input), 
+                                   style=Pack(padding=5, font_size=16, width=100, background_color=LIGHTGREEN))
+
+        # Add components to the login box
+        login_box.add(username_input)
+        login_box.add(password_input)
+        login_box.add(login_button)
+
+        # Set as the content of the main window
+        self.main_window.content = login_box
+        self.main_window.show()
+
+    def login_handler(self, username_input, password_input):
+        # Validate credentials
+        username = username_input.value
+        password = password_input.value
+        if username == 'admin' and password == 'password':
+            # Setup main window content on successful login
+            self.setup_main_window()
+        else:
+            # Show error dialog on login failure
+            self.main_window.error_dialog('Login Failed', 'Invalid username or password. Please try again.')
+
+    def setup_main_window(self):
         main_box = toga.Box(style=Pack(direction=COLUMN, alignment=CENTER, padding=20, background_color=LIGHTBLUE))
 
         # Etykieta powitalna
@@ -137,9 +168,9 @@ class ExpenseManager(toga.App):
         main_box.add(self.total_label)
 
         # Ustawienie zawartości głównego okna
-        self.main_window = toga.MainWindow(title=self.formal_name)
+        # Update the existing main window's content and title
         self.main_window.content = main_box
-        self.main_window.show()
+        self.main_window.title = "Expense Manager"
 
     def add_friend_handler(self, widget):
         # Obsługa dodawania znajomego
@@ -297,10 +328,10 @@ class ExpenseManager(toga.App):
         # Wyświetlanie komunikatu
         self.main_window.info_dialog(title, message)
 
+    
 
 def main():
     return ExpenseManager(formal_name='Expense Manager', app_id='org.beeware.expensemanager')
-
 
 if __name__ == '__main__':
     main().main_loop()
